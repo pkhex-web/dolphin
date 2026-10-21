@@ -136,6 +136,11 @@ void FifoManager::ExitGpuLoop()
 }
 
 #ifdef __LIBRETRO__
+void FifoManager::PrepareGpuLoop()
+{
+  m_gpu_mainloop.Prepare();
+}
+
 void FifoManager::StopGpuLoop()
 {
   m_gpu_mainloop.Stop(Common::BlockingLoop::StopMode::NonBlock);

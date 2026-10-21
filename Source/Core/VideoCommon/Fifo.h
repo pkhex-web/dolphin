@@ -76,6 +76,7 @@ public:
   void EmulatorState(bool running);
   void ResetVideoBuffer();
 #ifdef __LIBRETRO__
+  void PrepareGpuLoop();
   void StopGpuLoop();
 #endif
 

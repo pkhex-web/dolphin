@@ -484,6 +484,7 @@ void retro_run(void)
 
   if (system.IsDualCoreMode())
   {
+    system.GetFifo().PrepareGpuLoop();
     Core::DoFrameStep(system);
     system.GetFifo().RunGpuLoop();
   }
